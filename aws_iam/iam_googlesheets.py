@@ -3,6 +3,9 @@ This script is designed to demonstrate a potetial use case for google sheets and
 It is meant to be run daily, it writes the AWS users it finds into google sheets in the column
 of each day. It also prints to the screen if new users are found.
 
+It works by identifying todays date, then pulling the first row of all columns of a googlespreadsheet
+
+
 Cloudtrail already alerts when new users are created, but this was an easy way to demonstrate
 both services.
 
@@ -23,7 +26,7 @@ import datetime
 
 def main():
     SCOPES = ['https://www.googleapis.com/auth/spreadsheets']
-    speadsheet_ID = '1TWk0gLhuXRNgX0HSEy5uvP6A9z3iPhRKgUQmHdjXF9I'
+    speadsheet_ID = 'xxxxxxxxxxxxxxxxxxxxxxx'
     #on windows you may need to use the full path for the credentails.json location
     credentials_location = "credentials.json"
     """Shows basic usage of the Sheets API.
