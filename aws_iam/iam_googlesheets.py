@@ -3,11 +3,19 @@ This script is designed to demonstrate a potetial use case for google sheets and
 It is meant to be run daily, it writes the AWS users it finds into google sheets in the column
 of each day. It also prints to the screen if new users are found.
 
-It works by identifying todays date, then pulling the first row of all columns of a googlespreadsheet
+It works by identifying todays date, then pulling the first row of all columns of a googlespreadsheet,
+finding the column for yesterdays dates. Pulls yesterdays columns data, then connects to the
+AWS SDK to pull a list of all users (which becomes todays list). It compares yesterdays users
+with todays list, to idetify any new users. It then writes todays users to googlespreadsheet.
 
 
 Cloudtrail already alerts when new users are created, but this was an easy way to demonstrate
 both services.
+
+
+Expansion ideas:
+- and more error handling
+- sending an alert via slack of new users
 
 '''
 
