@@ -5,17 +5,10 @@ from datetime import datetime, timedelta, timezone
 
 # Define the date 90 days ago from now, as a timezone-aware datetime object
 ninety_days_ago = datetime.now(timezone.utc) - timedelta(days=90)
-
-
 # Use the default session
 iam_client = boto3.client('iam')
-
 # Get a paginator to list all users
 paginator = iam_client.get_paginator('list_users')
-
-# Define the date 90 days ago from now
-# ninety_days_ago = datetime.now() - timedelta(days=90)
-
 # Initialize a list to store the users who haven't used their password for 90 days
 inactive_users = []
 
