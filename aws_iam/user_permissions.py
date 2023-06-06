@@ -3,7 +3,7 @@ import json
 
 iam = boto3.client('iam')
 
-username = 'boto3'  # replace with your user name
+username = 'username'  # replace with your user name
 
 def print_policies(response):
     for policy in response['AttachedPolicies']:
